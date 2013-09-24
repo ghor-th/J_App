@@ -14,11 +14,8 @@ public class Grafika extends Applet{
 	int rect_pts = 4;
 	
 	public void init(){
-<<<<<<< HEAD
+
 		setSize(500, 500);
-=======
-		setSize(800, 500);
->>>>>>> e54f89c17b40631ad2da31eba2af849dc856ff05
 		setBackground(Color.BLUE);
 		setForeground(Color.WHITE);
 		font = new Font("Rod", Font.BOLD, 16);
