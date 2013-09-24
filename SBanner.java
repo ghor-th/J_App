@@ -14,10 +14,11 @@ public class SBanner extends Applet implements Runnable {
 	public void init() {
 		setBackground(Color.blue);
 		setForeground(Color.white);
-		f1 = new Font("Serif", Font.BOLD, 16);
+		f1 = new Font("Rod", Font.BOLD, 16);
 	}
 
 	public void start() {
+
 		t = new Thread(this);
 		stopflag = false;
 		t.start();
@@ -54,11 +55,11 @@ public class SBanner extends Applet implements Runnable {
 	public void paint(Graphics g) {
 		//g.drawString(msg, 80, 40);
 		//g.drawString(msg_2, 80,80);
-		//g.setFont(f1);
-		//g.drawString(msg, 30, 100);
+		g.setFont(f1);
+		g.drawString(msg, 30, 100);
 		//g.drawOval(30, 40, 30, 55);
 		//g.draw3DRect(120, 120, 60, 50, false);
-		g.drawArc(80, 80, 50, 50, 20, 90);
+		//g.drawArc(80, 80, 50, 50, 20, 90);
 	}
 
 		
