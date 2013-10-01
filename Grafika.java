@@ -1,3 +1,4 @@
+//tadam
 import java.applet.*;
 import java.awt.*;
 public class Grafika extends Applet{
