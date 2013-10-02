@@ -28,7 +28,6 @@ public class Movik extends Applet implements Runnable{
 		int my = 150;
 	 	while(mx < 260) {
 				try {
-						Exception e ;
 						mx+=2;
 						my++;
 						g.setColor(Color.blue);
