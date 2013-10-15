@@ -1,20 +1,37 @@
-//import java.applet.*;
+import java.applet.*;
 import java.awt.*;
 
-import javax.swing.text.MaskFormatter;
-public class SBanner extends Applet  implements Runnable{
 
-	String msg   ="<<<- 1_<<<- 2_<<<- 3_<<<-";
-	String msg_2 ="->>>_3 ->>>_2 ->>>_1 ->>>";
+public class ParamBanner extends Applet  implements Runnable{
+
+	String msg;// ="text eclipse 1";
+	String msg_2;// ="text eclipse 2" ;
 	Thread t=null;
 	boolean stopflag;
 
 	public void init() {
-		setSize(800, 500);
-		
+		setSize(700, 500);
 		setBackground(Color.BLUE);
 		setForeground(Color.white);
-	}
+		
+
+		msg = getParameter("html_msg");
+		if( msg == null) {  msg = "Not found msg_1";}
+		
+		msg_2 = getParameter("html_msg_2");
+		if( msg_2 == null) {  msg = "Not found msg_2";}
+/*		
+		String param;
+		param = getParameter("msg_2"); 
+		try {
+			if( param !=" ") { 
+				msg_2 = Integer.parseInt(param);
+			}else { msg_2 = -1;}
+		} catch (NumberFormatException e) {
+			msg_2 = 0;
+		}
+*/
+	}//end init()
 
    public void start() {
 		t = new Thread(this);
@@ -51,8 +68,8 @@ public class SBanner extends Applet  implements Runnable{
 		t=null;
 	}
 	public void paint(Graphics g) {
-		g.drawString(msg, 190, 40);
-		g.drawString(msg_2, 30,40);
+		g.drawString(msg,  20, 40);
+		g.drawString(msg_2,20, 60);
 	}
 
 }
